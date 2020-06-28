@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+</head>
+<body >
+<div>
+    <form action="/adduser" method="post">
+        <label for="">用户名</label>
+        <input type="text" name="username">
+        <label for="">密码</label>
+        <input type="password" name="password">
+        <input type="submit" value="注册">
+    </form>
+</div>
+<div>
+    <form action="/getalluser" method="post">
+        <label for="">获取所有用户</label>
+
+        <input type="submit" value="获取所有用户">
+    </form>
+</div>
+<div>
+    <form action="/getuser" method="post">
+        <label for="">用户名</label>
+        <input type="text" name="username">
+        <input type="submit" value="查询用户">
+    </form>
+</div>
+<h2 th:utext="${msg}"></h2>
+<!--<h2 th:each="user:${users.username}"></h2>-->
+
+</body>
+</html>
